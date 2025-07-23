@@ -1,5 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
-import { cn } from "@/lib/utils"; // Importe o utilitário cn da shadcn
+import { cn } from "@/lib/utils";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export type MessageBoxProps = {
   text: string;
@@ -37,7 +39,7 @@ export function MessageBox({ text, sender }: MessageBoxProps) {
               : "bg-muted" // Cor do shadcn para o assistente
           )}
         >
-          <p className="text-sm">{text}</p>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{text}</ReactMarkdown>
         </div>
       </div>
     </div>
