@@ -10,7 +10,7 @@ import { MessageBox, MessageBoxProps } from "@/components/ui/MessageBox";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-export default function Home() {
+export default function ChatScreen() {
   const [messages, setMessages] = useState<MessageBoxProps[]>([
     {
       text: "Hello! How can I assist you today?",
