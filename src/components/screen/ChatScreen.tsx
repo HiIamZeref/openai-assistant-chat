@@ -9,8 +9,13 @@ import { useState, useRef, useEffect } from "react";
 import { MessageBox, MessageBoxProps } from "@/components/ui/MessageBox";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { UserData } from "./LoginScreen";
 
-export default function ChatScreen() {
+export type ChatScreenProps = {
+  userData: UserData;
+};
+
+export function ChatScreen({ userData }: ChatScreenProps) {
   const [messages, setMessages] = useState<MessageBoxProps[]>([
     {
       text: "Hello! How can I assist you today?",
