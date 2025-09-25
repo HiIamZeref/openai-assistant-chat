@@ -35,8 +35,8 @@ export function MessageBox({ text, sender }: MessageBoxProps) {
           className={cn(
             "rounded-lg p-3",
             isUser
-              ? "bg-primary text-primary-foreground" // Cores do shadcn para o usuário
-              : "bg-muted" // Cor do shadcn para o assistente
+              ? "bg-[#E6EBD0] text-[#333]"
+              : "bg-[#F3F5E7] text-[#333]"
           )}
         >
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{text}</ReactMarkdown>
